@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/logo.png" type="image/gif" sizes="16x16">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Book List</title>
+</head>
+<body>
+    
+    <div id="app">
+        <section class="left-section">
+            <form>
+                <div class="input-group">
+                    <label>Title</label>
+                    <input type="text" id="title" autocomplete="off">
+                </div>
+                <div class="input-group">
+                    <label>Author</label>
+                    <input type="text" id="author" autocomplete="off">
+                </div>
+                <div class="input-group">
+                    <label>ISBN</label>
+                    <input type="text" id="isbn" autocomplete="off">
+                </div>
+                <button id="addBookBtn">Add Book</button>
+            </form>
+        </section>
+        <section class="right-section">
+            <h2>Book List</h2>
+            <div id="bookList">
+
+                <div class="book-item">
+                    <div class="book-title">
+                        Eloquent JavaScript: A Modern Introduction to Programming
+                    </div>
+                    <div class="book-author">
+                        Marijn Haverbeke
+                    </div>
+                    <img src="img/delete.png" class="deleteBtn" alt="">
+                </div> 
+
+            </div>
+        </section>
+    </div>
+
+<script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+}
+
+::-webkit-scrollbar {
+    width: 3px;
+}
+
+#app {
+    max-width: 950px;
+    margin: auto;
+}
+
+.left-section {
+    width: 400px;
+    height: 100vh;
+    float: left;
+}
+
+form {
+    max-width: 350px;
+    margin: auto;
+    box-shadow: 0 0 15px rgb(230, 230, 230);
+    border-radius: 10px;
+    margin-top: 100px;
+    padding: 30px;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    font-weight: 300;
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.input-group input{
+    border: 1px solid lightgray;
+    outline: none;
+    padding: 10px;
+    color: #414141;
+    background-color: #fff;
+    border-radius: 3px;
+}
+
+form button {
+    width: 100%;
+    border-radius: 3px;
+    border: 1.5px solid lightgray;
+    padding: 15px;
+    outline: none;
+    cursor: pointer;
+    color: #414141;
+    background-color: #ffffff;
+    transition: .2s;
+    text-transform: uppercase;
+}
+
+form button:hover {
+    box-shadow: 2px 2px 0px rgb(230, 230, 230);
+}
+
+.right-section {
+    width: 500px;
+    height: 100vh;
+    float: left;
+    overflow: auto;
+}
+
+.right-section h2 {
+    font-weight: 500;
+    font-size: 25px;
+    text-align: center;
+    padding: 15px;
+}
+
+#bookList {
+    width: 90%;
+    margin: auto;
+    margin-top: 20px;
+}
+
+.book-item {
+    width: 100%;
+    padding: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    min-height: 170px;
+    margin-bottom: 25px;
+    background-image: url('../img/books.png');
+    background-size: 150px;
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    position: relative;
+    box-shadow:  5px 10px 30px #ebebeb, 
+             -10px -10px 30px #ffffff;
+}
+
+.book-item .book-title {
+    font-weight: 500;
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.book-item .book-author {
+    color: rgb(70, 70, 70);
+}
+
+.deleteBtn {
+    width: 25px;
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+    display: none;
+}
+
+.deleteBtn:hover {
+    filter: saturate(150%);
+}
+
+.book-item:hover .deleteBtn {
+    display: block;
+}
+
+
+@media only screen and (max-width: 900px) {
+    #app {
+        max-width: 500px;
+        margin: auto;
+    }
+    
+    .left-section {
+        width: 100%;
+        height: auto;
+        margin-bottom: 55px;
+    }
+
+    .right-section {
+        width: 100%;
+        height: auto;
+    }
+}
+
+
+@media (pointer:none), (pointer:coarse) {
+    .deleteBtn {
+        display: block;
+    }
+}
+
+
+#snackbar {
+    color: #fff;
+    width: 50%;
+    margin: auto;
+    padding: 10px 15px;
+    border-radius: 5px;
+    margin-top: 15px;
+}
